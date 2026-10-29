@@ -2,12 +2,13 @@ package com.pluralsight;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class App {
 
     public static void main(String[] args) {
-        LocalDateTime now = LocalDateTime.now();
+        ZonedDateTime now = ZonedDateTime.now();
 
         DateTimeFormatter euro = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         DateTimeFormatter iso8601 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -24,8 +25,5 @@ public class App {
         DateTimeFormatter challenge2 = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
 
         System.out.println(now.format(challenge1) + " on " + now.format(challenge2));
-
-
-
     }
 }
