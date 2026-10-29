@@ -19,6 +19,13 @@ public class App {
         System.out.println(now.format(weekDay));
         System.out.println(now.format(weekDayTime));
 
+        System.out.println("\nCHALLENGE");
+        DateTimeFormatter challenge1 = DateTimeFormatter.ofPattern("HH:mm");
+        DateTimeFormatter challenge2 = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
+
+        System.out.println(now.format(challenge1) + " on " + now.format(challenge2));
+
+
 
     }
 }
